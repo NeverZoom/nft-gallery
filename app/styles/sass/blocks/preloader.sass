@@ -1,0 +1,45 @@
+.preloader
+  display: flex
+  justify-content: center
+  overflow: hidden
+  height: 100vh
+  padding-top: 10vw
+  .preloader__text
+    text-transform: uppercase
+    font-weight: 700
+    display: block
+    font-size: 37vw
+    line-height: 40vw
+  canvas
+    z-index: -1
+    position: absolute
+    top: 0
+    left: 0
+
+.hero_visible
+  position: absolute
+  top: 30%
+  left: 0
+  width: 100%
+  height: auto
+  background: white
+  border-radius: 6vw
+
+.hero_hero__border
+  transition-duration: 1s
+  transition-timing-function: cubic-bezier(0.19,1,0.22,1)
+  transition-property: transform
+  height: 15vw
+  background-color: white
+  color: $accent
+  overflow: hidden
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  border-top-left-radius: 10.6666666667vw
+  border-top-right-radius: 10.6666666667vw
+  transition: unset
+  will-change: transform
+  transform: translateY(35vw)
+  transition: unset

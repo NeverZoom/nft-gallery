@@ -1,0 +1,122 @@
+.about__container
+  padding-top: 6vw
+  margin-bottom: 18vw
+  .about__container__postscript
+    color: #bdbdbd
+    font-size: 40px
+    text-align: right
+    font-family: futura
+    font-weight: 400
+  .about__container__main-content
+    padding-top: 10vw
+    .button
+      margin-top: 35px
+    .about__container__main-content__p
+      font-family: futura
+      font-weight: 400
+      font-size: 1.5vw
+      line-height: 140%
+    .about__container__main-content__title
+      font-family: zodchiy
+      font-size: 6.6vw
+      line-height: 90%
+      span
+        display: block
+        font-family: helvetica
+        font-weight: 700
+  .about__container__accordion_wrapper
+    padding-top: 10vw
+    .panel
+      height: 85vh
+      border-top: 1px solid #e0e0e0
+      padding-top: 60px
+      background: white
+      padding-bottom: 40px
+      .dots
+        // width: 610px
+        // height: 410px
+      .container, .row, .col-lg-6
+        height: 100%
+      .about__container__accordion_wrapper__content_counter
+        font-size: 40px
+        font-weight: 500
+      .about__container__accordion_wrapper__content_container
+        .about__container__accordion_wrapper__content_container__title
+          font-size: 1vw
+          font-weight: 700
+        .about__container__accordion_wrapper__container__content
+          font-size: 20px
+          font-weight: 400
+          line-height: 140%
+          margin-bottom: 20px
+      .about__container__accordion_wrapper__image_title
+        font-size: 40px
+        font-weight: 500
+      .about__container__accordion_wrapper__image_mask
+        mask-image: url(/images/dist/layer2.svg)
+        mask-repeat: no-repeat
+        margin-top: 45px
+        .mask_shadow
+          position: absolute
+          top: 0
+          left: 0
+        img
+          width: 100%
+
+.about__container__accordion_wrapper_mobile
+  margin-top: 20vw
+  .accordion-item
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: -10%
+      width: 110vw
+      height: 0.2666666667vw
+      background: #e0e0e0
+      transition: .6s opacity cubic-bezier(0.19,1,0.22,1)
+      overflow: visible
+    &.active
+      .heading
+        .icon
+          transform: rotate(0deg)
+    .heading
+      padding: 8vw 0
+      font-size: 6.8666666667vw
+      font-family: futura
+      font-weight: 500
+      letter-spacing: -.01em
+      line-height: 125%
+      color: $accent
+      display: flex
+      justify-content: space-between
+      .counter
+      .title
+        max-width: 210px
+      .icon
+        transition: .6s transform cubic-bezier(0.19,1,0.22,1)
+        transform: rotate(90deg)
+        width: 4vw
+        display: flex
+        // height: 4vw
+    .content
+      display: none
+  .about__container__accordion_wrapper__image_mask
+    mask-image: url(/images/dist/layer2.svg)
+    mask-repeat: no-repeat
+    transform: scale(0.9)
+    .mask_shadow
+      position: absolute
+      top: 0
+      left: 0
+    img
+      width: 100%
+  .about__container__accordion_wrapper__content_container
+    .about__container__accordion_wrapper__content_container__title
+      font-size: 4vw
+      padding-top: 20px
+      font-weight: bold
+    .about__container__accordion_wrapper__container__content
+      font-size: 18px
+      margin-bottom: 20px

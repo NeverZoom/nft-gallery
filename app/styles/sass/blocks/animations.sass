@@ -1,0 +1,33 @@
+@keyframes button_animate
+  0%, 50%
+    transform: translateY(20%) rotate(0deg)
+  25%
+    transform: translateY(20%) rotate(-10deg)
+  75%
+    transform: translateY(20%) rotate(10deg)
+  to
+    transform: translateY(20%) rotate(0deg)
+
+@keyframes marquee
+  0%
+    transform: translateX(0)
+  100%
+    transform: translatex(-40vw)
+
+@keyframes footer_dash
+  to
+    stroke-dashoffset: 0
+
+@keyframes marqueeFooter
+  0%
+    transform: translate3d(calc(0% * -1),0,0)
+  to
+    transform: translate3d(calc(-100% - 0%),0,0)
+
+@keyframes pulse
+  0%
+    transform: translateX(0px)
+  50%
+    transform: translateX(10px)
+  100%
+    transform: translateX(0px)

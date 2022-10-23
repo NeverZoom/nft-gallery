@@ -1,0 +1,109 @@
+.light_theme
+	background: white
+	::selection
+		background-color: $accent
+		color: #fff
+
+.dark_theme
+	background: $accent
+	color: white
+	margin-top: 20px
+	border-top-left-radius: 5.5vw
+	border-top-right-radius: 5.5vw
+	$border: rgba(#e0e0e0, .4)
+	overflow: hidden
+	::selection
+		background-color: #fff
+		color: $accent
+	.dots
+		.dot
+			background-color: white
+	.button
+		background: white
+		color: $accent !important
+		border: 1px solid white
+	.button_outlined
+		border: 1px solid white
+		color: white
+	.main-button
+		color: $accent
+
+.button
+	display: inline-block
+	background: $accent
+	border: 1px solid $accent
+	border-radius: 10px
+	position: relative
+	overflow: hidden
+	img
+		width: 100%
+		object-fit: contain
+
+.button_outlined
+	display: inline-block
+	background: none
+	border: 1px solid $accent
+	border-radius: 10px
+	position: relative
+	overflow: hidden
+	color: $accent
+
+a
+	text-decoration: none
+
+.main-button
+	font-weight: 500
+	transition: background .6s cubic-bezier(0.19,1,0.22,1)
+	padding: 1.18vw 1.46vw
+	color: white
+	&::after
+		content: ""
+		position: absolute
+		background: $blue-gradient
+		top: 0
+		left: -2%
+		right: -2%
+		bottom: 0
+		z-index: -1
+		filter: blur(8px)
+		opacity: 0
+		transition: .6s opacity cubic-bezier(0.19,1,0.22,1)
+		will-change: transform
+		transform: translateY(20%)
+	&:hover
+		background: none
+		color: $accent
+		&::after
+			animation: button_animate 4s linear infinite
+			opacity: .8
+
+.button-disabled
+	pointer-events: none
+	// opacity: 0.4
+
+.uppercase
+	text-transform: uppercase
+
+.helvetica
+	font-family: helvetica
+
+.futura
+	font-family: futura
+
+.zodchiy
+	font-family: zodchiy
+
+h1
+	margin: 0
+	padding: 0
+
+p
+	margin: 0
+
+main
+	padding-top: 9.4vw
+	// padding-bottom: 10.4vw
+
+
+.go_contact_select.active, .go_carier_select.active
+	animation: pulse 2s linear infinite

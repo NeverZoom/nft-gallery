@@ -1,0 +1,68 @@
+.blockchain__container
+  .blockchain__container__title
+    font-size: 5.7vw
+    line-height: 100%
+    font-weight: 700
+    span
+      font-family: zodchiy
+      font-weight: normal
+  .blockchain__container__subtitle
+    width: 20.8vw
+    line-height: 120%
+    font-size: 1.1vw
+    font-family: futura
+  .partners__wrapper
+    padding-top: 9vw
+    .red
+      &::before
+        background: $red-gradient
+    .green
+      &::before
+        background: $green-gradient
+    .blue
+      &::before
+        background: $blue-gradient
+    .yellow
+      &::before
+        background: $yellow-gradient
+    .partners__wrapper__child
+      height: 20.5vw
+      position: relative
+      // padding-bottom: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      mask-image: url(/images/dist/layer3.svg)
+      mask-repeat: no-repeat
+      &:hover
+        .marquee-content
+          animation: marquee 8s linear infinite
+        &::before
+          opacity: 1
+      .marquee
+        overflow: hidden
+        .marquee-content
+          display: flex
+          .marquee-item
+            flex: 0 0 20vw
+            margin: 0 1vw
+            img
+              display: block
+              width: 100%
+              padding: 0 20%
+      &::before
+        content: ""
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        opacity: 0
+        transition: opacity .6s cubic-bezier(0.19,1,0.22,1)
+      .mask_shadow
+        position: absolute
+        top: 0
+        left: 0
+      img
+        width: 100%
+

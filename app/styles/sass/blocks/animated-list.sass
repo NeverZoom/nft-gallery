@@ -1,0 +1,58 @@
+.animated-list__container
+  position: relative
+  .animated-list__container__graphic
+    display: flex
+    justify-content: center
+    position: absolute
+    transform: translate(-50%,50%)
+    z-index: 1
+    bottom: 50%
+    width: 62.5vw
+    left: 50%
+    img
+      width: 45%
+  .animated-list__container__item
+    position: relative
+    overflow: hidden
+    padding-top: 2.4vw
+    padding-bottom: 2.4vw
+    &:last-child
+      &::before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 0.0694444444vw
+        transform-origin: center
+        transform: scaleX(0)
+        width: 100%
+        background-color: #4f4f4f
+        z-index: 1
+        transition: transform 2.9s cubic-bezier(0.19,1,0.22,1)
+    &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      right: 0
+      height: 0.07vw
+      transform-origin: center
+      transform: scaleX(0)
+      background-color: #4f4f4f
+      transition: transform 4.09s cubic-bezier(0.19,1,0.22,1)
+    .animated-list__container__item__title
+      font-weight: 500
+      font-size: 2.7vw
+    .animated-list__container__item__description
+      font-weight: 200
+      font-size: 1.3vw
+      line-height: 135%
+      width: 27.7vw
+
+.animated-list__container.is-inview
+  .animated-list__container__item
+    &::after, &::before
+      transform: scaleX(1)
+    
+

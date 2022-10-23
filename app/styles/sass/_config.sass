@@ -1,0 +1,74 @@
+// USER VARIABLES SECTION
+
+$accent: #171717 // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #171717 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: helvetica, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+$blue-gradient: linear-gradient(5.53deg,rgba(0,26,255,.8) -13.27%,hsla(0,0%,96%,.8) 53.69%),linear-gradient(357.83deg,hsla(60,54%,97%,.6) 35.45%,rgba(61,81,255,.6) 79.92%),#5d6cf4
+$yellow-gradient: linear-gradient(5.53deg,rgba(254,255,77,.8) -13.27%,hsla(0,0%,96%,.8) 53.69%),linear-gradient(357.83deg,rgba(254,255,77,.6) 35.45%,rgba(254,255,77,.6) 79.92%),#feff4d
+$red-gradient: linear-gradient(5.53deg,rgba(255,61,0,.8) -13.27%,hsla(0,0%,96%,.8) 53.69%),linear-gradient(357.83deg,rgba(255,61,0,.6) 35.45%,rgba(255,61,0,.6) 79.92%),#feff4d
+$green-gradient: linear-gradient(5.53deg,rgba(154,255,75,.8) -13.27%,hsla(0,0%,96%,.8) 53.69%),linear-gradient(357.83deg,rgba(154,255,75,.6) 35.45%,rgba(154,255,75,.6) 79.92%),#feff4d
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 15px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('helvetica', normal, 100, '../fonts/HelveticaNeueCyr-UltraLight.woff2')
+@include font('helvetica', normal, 200, '../fonts/HelveticaNeueCyr-Thin.woff2')
+@include font('helvetica', normal, 300, '../fonts/HelveticaNeueCyr-Light.woff2')
+@include font('helvetica', normal, 400, '../fonts/HelveticaNeueCyr-Roman.woff2')
+@include font('helvetica', normal, 500, '../fonts/HelveticaNeueCyr-Medium.woff2')
+@include font('helvetica', normal, 700, '../fonts/HelveticaNeueCyr-Bold.woff2')
+@include font('helvetica', normal, 900, '../fonts/HelveticaNeueCyr-Black.woff2')
+
+@include font('futura', normal, 200, '../fonts/FuturaLightC.woff2')
+@include font('futura', normal, 400, '../fonts/FuturaBookC.woff2')
+@include font('futura', normal, 500, '../fonts/FuturaMediumC.woff2')
+@include font('futura', normal, 700, '../fonts/FuturaDemiC.woff2')
+
+@include font('zodchiy', normal, 400, '../fonts/ARCH_ZodchiyFont.woff2')
+
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
