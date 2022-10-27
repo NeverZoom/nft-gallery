@@ -339,4 +339,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 
+	if (window.screen.width < 768) { 
+		$('.about__container__accordion_wrapper').remove();
+	}
+
+
 })
