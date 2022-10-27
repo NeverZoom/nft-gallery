@@ -189,14 +189,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	var cnv3 = document.querySelector(`.canvas3`);
 	var cnv4 = document.querySelector(`.canvas4`);
 
-	new GradientAnimation(cnv1, 3, 400, 800, 0);
 
 	if (window.screen.width > 768) {
+	new GradientAnimation(cnv1, 3, 400, 800, 0);
+
 		new GradientAnimation(cnv2, 1, 200, 300, 1);
 		new GradientAnimation(cnv3, 1, 250, 250, 2);
+	new GradientAnimation(cnv4, 3, 400, 800, 0);
+
 	}
 
-	new GradientAnimation(cnv4, 3, 400, 800, 0);
 
 	gsap.utils.toArray(".panel").forEach((panel, i) => {
 		ScrollTrigger.create({
