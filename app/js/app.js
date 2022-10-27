@@ -1,3 +1,5 @@
+"use strict";
+
 import $, { nodeName } from 'jquery'
 window.jQuery = $
 window.$ = $
