@@ -41,6 +41,8 @@
     margin-bottom: 20px
     justify-content: center
     a
+      text-align: center
+      width: 100%
       font-size: 4vw
   .about__container
     padding-top: 0vw
@@ -170,6 +172,11 @@
       .partners__wrapper__child
         .mask_shadow
           top: -3px
+  .logo_show
+    margin-top: 0px
+    height: 21px
+  .w-100
+    max-width: none
 
 +media-breakpoint-up(sm)
   .header_button__left, .header_button__right
@@ -217,8 +224,11 @@
       width: 100%
       left: 0
   .btn_container
-    display: inline
+    display: flex
+    justify-content: space-evenly
     a
+      text-align: center
+      width: 100%
       font-size: 1.1vw
   .full-width_hero__container_button
     padding: 1.18vw 1.46vw
@@ -299,6 +309,11 @@
       .partners__wrapper__child
         .mask_shadow
           top: 0
+  .logo_show
+    margin-top: -8px
+    height: 28px
+  .w-100
+    max-width: 14vw
 
 +media-breakpoint-up(lg)
   .blockchain__container
@@ -342,6 +357,7 @@
               a
                 font-size: 1.1vw
 
+
 +media-breakpoint-up(xl)
   .full-width_hero__container
     .full-width_hero__container_content
@@ -352,5 +368,8 @@
       .dots
         width: 610px
         height: 410px
+  .logo_show
+    margin-top: -5px
+    height: 28px
 
 @media (min-width: 1300px)
