@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	gsap.to("feDisplacementMap", {
-		scrollTrigger: {trigger:".features-hero__container", toggleActions: "play reset play reset ", markers: true,},
+		scrollTrigger: {trigger:".features-hero__container", toggleActions: "play reset play reset ",},
 		attr: {scale: 0},
 		duration: 0.8,
 	});
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	gsap.to("feDisplacementMap", {
-		scrollTrigger: {trigger:".calltoaction__container", toggleActions: "play reset play reset ", markers: true,},
+		scrollTrigger: {trigger:".calltoaction__container", toggleActions: "play reset play reset ",},
 		attr: {scale: 0},
 		duration: 0.8,
 	});
