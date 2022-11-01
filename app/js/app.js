@@ -72,6 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		return tl.from(chars, {
 			duration: 0.3,
+			beforeStart: function() {
+        $('.preloader__text').css({'opacity' : '1'});
+    	},
 			y: '55vh',
 			stagger: 0.1,
 			delay: 0.9
@@ -81,11 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			padding: 0,
 			onComplete: function() {
 				$('.preloader').css({'backgroundColor' : 'white'});
+				$('.preloader').css({'background' : 'none'});
 				$('.preloader canvas').hide();
 				$('.light_theme').css({'background' : 'none'});
 				ScrollTrigger.refresh();
 			}})
 		.to("feDisplacementMap", {
+			beforeStart: function() {
+        $('.hero_section__container_title').css({'opacity' : '1'});
+    	},
 			attr: {scale: 0},
 			duration: 0.8,
 		})
@@ -228,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	gsap.to("feDisplacementMap", {
-		scrollTrigger: {trigger:".features-hero__container", toggleActions: "play play play play "},
+		scrollTrigger: {trigger:".features-hero__container", toggleActions: "play reset play reset ", markers: true,},
 		attr: {scale: 0},
 		duration: 0.8,
 	});
@@ -245,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	gsap.to("feDisplacementMap", {
-		scrollTrigger: {trigger:".calltoaction__container", toggleActions: "play play play play "},
+		scrollTrigger: {trigger:".calltoaction__container", toggleActions: "play reset play reset ", markers: true,},
 		attr: {scale: 0},
 		duration: 0.8,
 	});
