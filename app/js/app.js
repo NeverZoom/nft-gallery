@@ -8,6 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+		$('html').addClass('safari');
+	}
+
 	var mainNavigation = document.querySelector('.main_navigation');
 
 	window.addEventListener('scroll', ()=> {
