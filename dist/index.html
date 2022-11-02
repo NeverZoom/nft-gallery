@@ -68,13 +68,13 @@
 
         <svg viewBox="0 0 100 100" color-interpolation-filters="sRGB" class="centered-hero_filter">
           <defs>
-            <filter id=":R1dq6:" filterRes="1" width="102400" height="102400">
-              <feTurbulence filterRes="1" type="fractalNoise" baseFrequency="0.025" numOctaves="1" result="turbulence"></feTurbulence>
-              <feDisplacementMap filterRes="1" in2="turbulence" in="SourceGraphic" scale="100" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-              <feComposite filterRes="1" operator="in" in="SourceGraphic" result="intermediate-1"></feComposite>
+            <filter id=":R1dq6:">
+              <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="1" result="turbulence"></feTurbulence>
+              <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="100" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+              <feComposite operator="in" in="SourceGraphic" result="intermediate-1"></feComposite>
             </filter>
           </defs>
-          <rect x="0" y="0" width="100%" height="100%" filter="url(#:R1dq6:)"/>
+          <rect x="0" y="0" width="100%" height="100%" style="filter: url(#:R1dq6:)" filter="url(#:R1dq6:)"/>
         </svg>
 
         <h1 class="hero_section__container_title">SAVE AS <span>ЭТО <br>NFT</span> МАРКЕТПЛЕЙС ЦИФРОВЫХ <span>ОБОЕВ</span></h1>
